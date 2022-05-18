@@ -1,0 +1,65 @@
+{
+	"name": "acme/brilliant-wordpress-site",
+	"description": "My brilliant WordPress site",
+	"repositories": {
+		"satispress": {
+			"type": "composer",
+			"url": "https://plugins.adammartelletti.com/satispress/"
+		},
+		"0": {
+			"type": "composer",
+			"url": "https://wpackagist.org",
+			"only": [
+				"wpackagist-plugin/*",
+				"wpackagist-theme/*"
+			]
+		},
+		"1": {
+			"type": "package",
+			"package": {
+				"name": "rankmath/seo-by-rank-math-pro",
+				"type": "wordpress-plugin",
+				"version": "2.7.0",
+				"dist": {
+					"type": "zip",
+					"url": "https://rankmath.com/download/510590/?username=adam-2669&api_key=d6d08ae3dc9489452d2cfb5a7430d747"
+				}
+			}
+		}
+	},
+	"require": {
+		"wpackagist-theme/generatepress": "^3.1",
+		"satispress/advanced-custom-fields-pro": "^5.12",
+		"satispress/gp-premium": "^2.1",
+		"satispress/generatepress_child": "^0.1.0",
+		"satispress/search-filter-pro": "^2.5",
+		"satispress/perfmatters": "^1.9",
+		"wpackagist-plugin/marketing-automation": "1.2.6.4",
+		"satispress/wp-all-import-pro": "^4.7",
+		"satispress/wpai-acf-add-on": "^3.3",
+		"satispress/wp-all-export-pro": "^1.7",
+		"satispress/wpae-acf-add-on": "^1.0",
+		"satispress/permalink-manager-pro": "^2.2",
+		"satispress/acf-custom-database-tables": "^1.1",
+		"satispress/acf-extended-pro": "0.8.8.7",
+		"satispress/am-appsumo": "^1.0",
+		"wpackagist-plugin/import-xml-csv-settings-to-rank-math-seo": "1.1",
+		"rankmath/seo-by-rank-math-pro": "^2.7",
+		"satispress/am-affiliate": "^1.0",
+		"satispress/am-learn": "^1.0",
+		"satispress/am-menu": "^1.0"
+	},
+	"extra": {
+		"installer-paths": {
+			"wp-content/mu-plugins/{$name}/": [],
+			"wp-content/plugins/{$name}/": [
+				"type:wordpress-plugin"
+			]
+		}
+	},
+	"config": {
+		"allow-plugins": {
+			"composer/installers": true
+		}
+	}
+}
